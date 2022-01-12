@@ -1,0 +1,14 @@
+--cleansed dim calenders
+SELECT 
+  [DateKey], 
+  [FullDateAlternateKey] AS Date , 
+  [EnglishDayNameOfWeek]as day,
+  [WeekNumberOfYear]as weekno, 
+  [EnglishMonthName] as month, 
+  [MonthNumberOfYear] as monthno, 
+  [CalendarQuarter]as quater, 
+  [CalendarYear] as year 
+FROM 
+  [AdventureWorksDW2019].[dbo].[DimDate] 
+Where 
+  CalendarYear >= 2019
